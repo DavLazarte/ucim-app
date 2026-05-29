@@ -1,0 +1,23 @@
+{
+  "name": "Portal UCIM",
+  "short_name": "UCIM",
+  "description": "Credencial Digital y Beneficios para Socios de la Unión de Comerciantes e Industriales",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
