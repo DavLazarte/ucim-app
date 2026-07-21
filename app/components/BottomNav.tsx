@@ -3,8 +3,8 @@
 import { useAuth } from "../context/AuthContext";
 
 interface BottomNavProps {
-  tab: "inicio" | "carnet" | "beneficios" | "cuenta";
-  setTab: (tab: "inicio" | "carnet" | "beneficios" | "cuenta") => void;
+  tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta";
+  setTab: (tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta") => void;
 }
 
 export default function BottomNav({ tab, setTab }: BottomNavProps) {
@@ -15,7 +15,7 @@ export default function BottomNav({ tab, setTab }: BottomNavProps) {
       <nav className="max-w-md mx-auto bg-white/90 backdrop-blur-lg border border-slate-200/50 shadow-2xl rounded-2xl overflow-hidden flex justify-between px-2 py-1">
         <button
           onClick={() => setTab("inicio")}
-          className={`flex flex-col items-center justify-center w-1/4 py-3 rounded-xl transition-all duration-300 ${
+          className={`flex flex-col items-center justify-center w-1/5 py-3 rounded-xl transition-all duration-300 ${
             tab === "inicio" ? "text-blue-700 bg-blue-50/80 scale-105" : "text-slate-400 hover:text-slate-600"
           }`}
         >
@@ -25,7 +25,7 @@ export default function BottomNav({ tab, setTab }: BottomNavProps) {
 
         <button
           onClick={() => setTab("carnet")}
-          className={`flex flex-col items-center justify-center w-1/4 py-3 rounded-xl transition-all duration-300 relative ${
+          className={`flex flex-col items-center justify-center w-1/5 py-3 rounded-xl transition-all duration-300 relative ${
             tab === "carnet" ? "text-blue-700 bg-blue-50/80 scale-105" : "text-slate-400 hover:text-slate-600"
           }`}
         >
@@ -36,7 +36,7 @@ export default function BottomNav({ tab, setTab }: BottomNavProps) {
 
         <button
           onClick={() => setTab("beneficios")}
-          className={`flex flex-col items-center justify-center w-1/4 py-3 rounded-xl transition-all duration-300 ${
+          className={`flex flex-col items-center justify-center w-1/5 py-3 rounded-xl transition-all duration-300 ${
             tab === "beneficios" ? "text-blue-700 bg-blue-50/80 scale-105" : "text-slate-400 hover:text-slate-600"
           }`}
         >
@@ -45,13 +45,23 @@ export default function BottomNav({ tab, setTab }: BottomNavProps) {
         </button>
 
         <button
+          onClick={() => setTab("pagos")}
+          className={`flex flex-col items-center justify-center w-1/5 py-3 rounded-xl transition-all duration-300 ${
+            tab === "pagos" ? "text-blue-700 bg-blue-50/80 scale-105" : "text-slate-400 hover:text-slate-600"
+          }`}
+        >
+          <svg className="w-6 h-6 mb-1" fill={tab === "pagos" ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+          <span className="text-[10px] font-bold">Pagos</span>
+        </button>
+
+        <button
           onClick={() => setTab("cuenta")}
-          className={`flex flex-col items-center justify-center w-1/4 py-3 rounded-xl transition-all duration-300 ${
+          className={`flex flex-col items-center justify-center w-1/5 py-3 rounded-xl transition-all duration-300 ${
             tab === "cuenta" ? "text-blue-700 bg-blue-50/80 scale-105" : "text-slate-400 hover:text-slate-600"
           }`}
         >
-          <svg className="w-6 h-6 mb-1" fill={tab === "cuenta" ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-          <span className="text-[10px] font-bold">Pagos</span>
+          <svg className="w-6 h-6 mb-1" fill={tab === "cuenta" ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          <span className="text-[10px] font-bold">Perfil</span>
         </button>
       </nav>
     </div>

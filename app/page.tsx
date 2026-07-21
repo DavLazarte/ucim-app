@@ -8,9 +8,12 @@ import BottomNav from "./components/BottomNav";
 import InicioView from "./views/InicioView";
 import CarnetView from "./views/CarnetView";
 import BeneficiosView from "./views/BeneficiosView";
+import PerfilView from "./views/PerfilView";
+import PagosView from "./views/PagosView";
+import AlquileresView from "./views/AlquileresView";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 
-type Tab = "inicio" | "carnet" | "beneficios" | "cuenta";
+type Tab = "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta" | "alquileres";
 
 function AppContent() {
   const { isLoggedIn, loading, user, socio } = useAuth();
@@ -56,13 +59,9 @@ function AppContent() {
         {tab === "inicio" && <InicioView setTab={setTab} />}
         {tab === "carnet" && <CarnetView />}
         {tab === "beneficios" && <BeneficiosView />}
-        
-        {tab === "cuenta" && (
-          <div className="space-y-6 animate-fade-in text-center py-10">
-            <h2 className="text-2xl font-bold text-slate-800">Próximamente</h2>
-            <p className="text-slate-500">Aquí podrás ver tu historial de pagos en el futuro.</p>
-          </div>
-        )}
+        {tab === "pagos" && <PagosView />}
+        {tab === "alquileres" && <AlquileresView />}
+        {tab === "cuenta" && <PerfilView />}
       </div>
 
       <BottomNav tab={tab} setTab={setTab} />

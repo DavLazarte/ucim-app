@@ -120,25 +120,47 @@ export default function InicioView({ setTab }: InicioViewProps) {
         <h2 className="text-lg font-bold text-slate-800 mb-3 px-1">Accesos rápidos</h2>
         <div className="grid grid-cols-2 gap-4">
           <button
+            onClick={() => setTab("carnet")}
+            className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 text-left hover:shadow-md hover:border-blue-100 transition-all group"
+          >
+            <div className="bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
+            </div>
+            <h3 className="font-bold text-slate-900 text-sm">Mi Carnet</h3>
+            <p className="text-xs text-slate-500 mt-1">Ver código QR</p>
+          </button>
+          
+          <button
+            onClick={() => setTab("alquileres")}
+            className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 text-left hover:shadow-md hover:border-blue-100 transition-all group"
+          >
+            <div className="bg-purple-50 text-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 className="font-bold text-slate-900 text-sm">Alquileres</h3>
+            <p className="text-xs text-slate-500 mt-1">Reservar espacios</p>
+          </button>
+
+          <button
             onClick={() => setTab("beneficios")}
             className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 text-left hover:shadow-md hover:border-blue-100 transition-all group"
           >
-            <div className="bg-amber-100 text-amber-600 w-10 h-10 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-              🎁
+            <div className="bg-amber-50 text-amber-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
             </div>
-            <h3 className="font-semibold text-slate-800">Beneficios</h3>
-            <p className="text-xs text-slate-500 mt-1">Catálogo completo</p>
+            <h3 className="font-bold text-slate-900 text-sm">Promo / Descuentos</h3>
+            <p className="text-xs text-slate-500 mt-1">Empresas amigas</p>
           </button>
 
           <button
             onClick={() => setTab("cuenta")}
-            className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 text-left hover:shadow-md hover:border-blue-100 transition-all group opacity-50 cursor-not-allowed"
+            className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 text-left hover:shadow-md hover:border-blue-100 transition-all group"
           >
-            <div className="bg-slate-100 text-slate-600 w-10 h-10 rounded-xl flex items-center justify-center text-xl mb-3">
-              🚧
+            <div className="bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
             </div>
-            <h3 className="font-semibold text-slate-800">Pagos</h3>
-            <p className="text-xs text-slate-500 mt-1">Próximamente</p>
+            <h3 className="font-bold text-slate-900 text-sm">Perfil</h3>
+            <p className="text-xs text-slate-500 mt-1">Mis datos y empresa</p>
           </button>
         </div>
       </div>

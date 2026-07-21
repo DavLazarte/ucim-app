@@ -17,8 +17,19 @@ export interface Socio {
   last_name: string;
   dni: string;
   email: string;
+  phone?: string;
+  address?: string;
+  locality?: string;
+  birth_date?: string;
+  admission_date?: string;
   account_status: string;
   is_al_dia: boolean;
+  companies?: {
+    id: number;
+    business_name: string;
+    monthly_price?: number;
+    [key: string]: any;
+  }[];
 }
 
 interface AuthContextType {
