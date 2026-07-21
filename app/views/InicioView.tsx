@@ -3,7 +3,7 @@
 import { useAuth } from "../context/AuthContext";
 
 interface InicioViewProps {
-  setTab: (tab: "inicio" | "carnet" | "beneficios" | "cuenta") => void;
+  setTab: (tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta" | "alquileres") => void;
 }
 
 export default function InicioView({ setTab }: InicioViewProps) {
