@@ -3,8 +3,8 @@
 import { useAuth } from "../context/AuthContext";
 
 interface BottomNavProps {
-  tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta";
-  setTab: (tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta") => void;
+  tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta" | "alquileres";
+  setTab: (tab: "inicio" | "carnet" | "beneficios" | "pagos" | "cuenta" | "alquileres") => void;
 }
 
 export default function BottomNav({ tab, setTab }: BottomNavProps) {
