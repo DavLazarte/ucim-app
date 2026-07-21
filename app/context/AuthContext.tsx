@@ -22,6 +22,7 @@ export interface Socio {
   locality?: string;
   birth_date?: string;
   admission_date?: string;
+  position_in_company?: string;
   account_status: string;
   is_al_dia: boolean;
   companies?: {
